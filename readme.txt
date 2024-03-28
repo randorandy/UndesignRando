@@ -22,4 +22,4 @@ Thanks to beauxq, and without the Subversion rando none of these other projects 
 https://github.com/SubversionRando/SubversionRando
 
 GAMEPLAY
-This version of Redesign came out of a conversation like, "can we play Redesign with original Super Metroid physics?" The answer was "mostly, yes" and we started down this road. This version of the randomizer is intended for use with the "regular SM" physics but the project is meant to bridge both worlds. For now, use a modified rom with starting walljump
+This version of Redesign came out of a conversation like, "can we play Redesign with original Super Metroid physics?" The answer was "mostly, yes" and we started down this road. This version of the randomizer is intended for use with the "regular SM" physics but the project is meant to bridge both worlds. For now, use a modified rom with starting walljump. The IPS patch is provided in the repo and there is a link at the top of the web roller to find it.
