@@ -15,7 +15,7 @@ If you prefer an offline or custom experience, you may want to use python3 and r
 3.run Main.py in console
 This should create a randomized rom with the given name in the roms folder and a spoiler log (.txt) in the spoilers folder.
 
-Thanks to Komaru for your blessing and the groundwork that has already been done:
+Thanks to Komaru for your blessing and Audraxys for the logic groundwork that has already been done:
 https://github.com/Komarulon/smrandomizer
 
 Thanks to beauxq, and without the Subversion rando none of these other projects would have been possible for me:
