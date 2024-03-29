@@ -23,3 +23,19 @@ https://github.com/SubversionRando/SubversionRando
 
 GAMEPLAY
 This version of Redesign came out of a conversation like, "can we play Redesign with original Super Metroid physics?" The answer was "mostly, yes" and we started down this road. This version of the randomizer is intended for use with the "regular SM" physics but the project is meant to bridge both worlds. For now, use a modified rom with starting walljump. The IPS patch is provided in the repo and there is a link at the top of the web roller to find it.
+
+Change notes for Undesign IPS Patch:
+Restored Vanilla physics table
+Restored short charging ability
+Restored vanilla screw attack behavior
+Applied improved respin (from VARIA)
+Applied the "Easy Space jump" patch (from VARIA)
+Updated shot timings for wave/ice/plasma and all combos
+Restored vanilla charge beam counter and animation timer
+Restored vanilla super missile fire rate
+Restored vanilla bomb timings
+Decreased cooldown when all three bombs are dropped
+Modified damage tables for beams
+Allowed wall jumping on all surfaces from beginning of game
+Skip Ceres
+Replace wall jump boots item with missile
