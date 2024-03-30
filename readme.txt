@@ -42,3 +42,4 @@ Replace wall jump boots item with missile
 
 shortmessageboxes.ips notes:
 Shortened fanfares
+Can be applied to Redesign/Undesign before or after rolling the randomizer
