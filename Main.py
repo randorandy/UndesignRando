@@ -188,6 +188,11 @@ def write_rom(game: Game, romWriter: Optional[RomWriter] = None) -> str:
     romWriter.writeBytes(0x79767, b"\x40")
     # Escape missile becomes super
     romWriter.writeBytes(0x7fe10, b"\x87")
+    # MB Skip Power Down
+    romWriter.writeBytes(0x14ba4c, b"\xea\xea\xea")
+    romWriter.writeBytes(0x14ba50, b"\xcf\xbb")
+    romWriter.writeBytes(0x14ba5f, b"\x2e")
+
     
 
 
