@@ -163,8 +163,8 @@ def write_rom(game: Game, romWriter: Optional[RomWriter] = None) -> str:
     
     # Remove gravity suit heat protection #test
     romWriter.writeBytes(0x6e37d, b"\x01")
-    #romWriter.writeBytes(0x869dd, b"\x01")    #hellrun speed echoes patch ##verify
-    #romWriter.writeBytes(0x8b629, b"\x01")
+    romWriter.writeBytes(0x869dd, b"\x01")    
+    romWriter.writeBytes(0x8b629, b"\x01") #hellrun speed echoes patch?? ##verify
 
     # 5 missiles open
     romWriter.writeBytes(0x260dd, b"\x05")
@@ -186,6 +186,8 @@ def write_rom(game: Game, romWriter: Optional[RomWriter] = None) -> str:
     romWriter.writeBytes(0x261dc, b"\xf3\x88\x00\x01\x0b")
     # Awakening
     romWriter.writeBytes(0x79767, b"\x40")
+    # Escape missile becomes super
+    romWriter.writeBytes(0x7fe10, b"\x87")
     
 
 
