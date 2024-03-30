@@ -39,3 +39,6 @@ Modified damage tables for beams
 Allowed wall jumping on all surfaces from beginning of game
 Skip Ceres
 Replace wall jump boots item with missile
+
+shortmessageboxes.ips notes:
+Shortened fanfares
