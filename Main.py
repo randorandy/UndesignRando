@@ -192,6 +192,8 @@ def write_rom(game: Game, romWriter: Optional[RomWriter] = None) -> str:
     romWriter.writeBytes(0x14ba4c, b"\xea\xea\xea")
     romWriter.writeBytes(0x14ba50, b"\xcf\xbb")
     romWriter.writeBytes(0x14ba5f, b"\x2e")
+    # West of Crateria Escape Patch
+    romWriter.writeBytes(0x78735, b"\xb6")
 
     
 
