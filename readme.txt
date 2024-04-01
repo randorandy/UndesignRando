@@ -6,7 +6,7 @@ https://discord.gg/zDgFTuSSFY
 
 WEB ROLLER
 The most accessible way to use this randomizer is the web roller here:
-https://randorandy.github.io/RedesignRando/
+https://randorandy.github.io/UndesignRando/
 
 LOCAL DOWNLOAD
 If you prefer an offline or custom experience, you may want to use python3 and roll locally:
@@ -22,7 +22,7 @@ Thanks to beauxq, and without the Subversion rando none of these other projects 
 https://github.com/SubversionRando/SubversionRando
 
 GAMEPLAY
-This version of Redesign came out of a conversation like, "can we play Redesign with original Super Metroid physics?" The answer was "mostly, yes" and we started down this road. This version of the randomizer is intended for use with the "regular SM" physics but the project is meant to bridge both worlds. For now, use a modified rom with starting walljump. The IPS patch is provided in the repo and there is a link at the top of the web roller to find it.
+This version called Undesign came out of a conversation like, "can we play Redesign with original Super Metroid physics?" The answer was "mostly, yes" and we started down this road. This version of the randomizer is intended for use with the "regular SM" physics but the project is meant to bridge both worlds. For now, use a modified rom with starting walljump. The IPS patch is provided in the repo and there is a link at the top of the web roller to find it.
 
 Change notes for Undesign IPS Patch:
 Restored Vanilla physics table
