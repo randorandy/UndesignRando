@@ -983,7 +983,7 @@ location_logic: LocationLogicType = {
         (canUsePB in loadout) and
         (canDBJ in loadout)
     ),
-    "Power Bomb (Red Brinstar top entrance)": lambda loadout: (
+    "*Power Bomb (Red Brinstar top entrance)": lambda loadout: (
         (kraid in loadout) and
         (canUsePB in loadout) and
         (
@@ -1043,7 +1043,7 @@ location_logic: LocationLogicType = {
             (energy200 in loadout)
         )
     ),
-    "Missile (Lower Norfair top)": lambda loadout: (
+    "*Missile (Lower Norfair top)": lambda loadout: (
         (lowerNorfair in loadout)
     ),
     "*Missile (Lower Norfair shinespark)": lambda loadout: (
@@ -1084,7 +1084,7 @@ location_logic: LocationLogicType = {
     "*Power Bomb (East Norfair Guardian)": lambda loadout: (
         (escapeGrappleGauntlet in loadout)
     ),
-    "Missile (Bob Jr.)": lambda loadout: (
+    "*Missile (Bob Jr.)": lambda loadout: (
         (kraid in loadout) and
         (Varia in loadout) and
         (canUsePB in loadout) and
@@ -1167,7 +1167,7 @@ location_logic: LocationLogicType = {
         )
 
     ),
-    "Missile (Bob Jr. underpass)": lambda loadout: (
+    "*Missile (Bob Jr. underpass)": lambda loadout: (
         (westNorfair in loadout) and
         (canUsePB in loadout) and
         (canDBJ in loadout) and
@@ -1185,7 +1185,7 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "Power Bomb (East Norfair maze)?? or violas??": lambda loadout: (
+    "*Power Bomb (Lower Norfair Violas)": lambda loadout: (
         (lowerNorfair in loadout) and
         (canDBJ in loadout)
     ),
@@ -1204,7 +1204,7 @@ location_logic: LocationLogicType = {
         (ridley in loadout) and
         (GravitySuit in loadout)
     ),
-    "Super Missile (Lower Norfair holtz tease)": lambda loadout: (
+    "*Super Missile (Lower Norfair holtz tease)": lambda loadout: (
         (lowerNorfair in loadout) and
         (
             (canSBJ in loadout) or
@@ -1277,7 +1277,7 @@ location_logic: LocationLogicType = {
         (Wave in loadout) and
         (canUseBombs in loadout)
     ),
-    "Reserve Tank (Norfair)": lambda loadout: (
+    "*Reserve Tank (Norfair)": lambda loadout: (
         (westNorfair in loadout) and
         (canUsePB in loadout) and
         (SpeedBooster in loadout) and
@@ -1377,9 +1377,6 @@ location_logic: LocationLogicType = {
             (energy400 in loadout)
         )
     ),
-    "0x7b151 Extra Reserve Tank in Norfair id:103??": lambda loadout: (
-        (allItems in loadout)
-    ),
     "*Energy Tank (Grapple)": lambda loadout: (
         (escapeGrappleGauntlet in loadout) and
         (GravitySuit in loadout) #simplest logic for now
@@ -1388,10 +1385,16 @@ location_logic: LocationLogicType = {
         (westNorfair in loadout) and
         (SpeedBooster in loadout)
     ),
-    "0x78376 Norfair Chozo Missile??": lambda loadout: (
-        (allItems in loadout)
+    "Missile (West Norfair Sanctum Top)": lambda loadout: (
+        (westNorfair in loadout) and
+        (SpeedBooster in loadout) and
+        (
+            (Ice in loadout) or
+            (GravitySuit in loadout) or
+            (SpaceJump in loadout)
+        )
     ),
-    "0x79138 Power Bomb (Norfair)??": lambda loadout: (
+    "*Power Bomb (East Norfair Purple Maze)": lambda loadout: (
         (allItems in loadout)
     ),
     "0x79100 Missile Norfair shared PB id:77??": lambda loadout: (
