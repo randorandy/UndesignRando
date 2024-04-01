@@ -1308,7 +1308,7 @@ location_logic: LocationLogicType = {
         (SpeedBooster in loadout) and
         (HiJump in loadout)
     ),
-    "Energy Tank (Draygon sandfall)": lambda loadout: (
+    "*Energy Tank (Draygon sandfall)": lambda loadout: (
         (
             (eastMaridia in loadout) and
             (
@@ -1340,7 +1340,7 @@ location_logic: LocationLogicType = {
         ) and
         (SpeedBooster in loadout)
     ),
-    "Super Missile (East Maridia Draygon lock)": lambda loadout: (
+    "*Super Missile (East Maridia Draygon lock)": lambda loadout: (
         (draygon in loadout)
     ),
     "*Beam Combo": lambda loadout: (
@@ -1395,10 +1395,35 @@ location_logic: LocationLogicType = {
         )
     ),
     "*Power Bomb (East Norfair Purple Maze)": lambda loadout: (
-        (allItems in loadout)
-    ),
-    "0x79100 Missile Norfair shared PB id:77??": lambda loadout: (
-        (allItems in loadout)
+        #copied logic from alcoon hideout
+        (kraid in loadout) and
+        (Varia in loadout) and
+        (canUsePB in loadout) and
+        (
+            (
+                (GravitySuit in loadout) and
+                (kraid in loadout)
+            ) or
+            (
+                (purpleDoor in loadout) and
+                (
+                    (Grapple in loadout) or
+                    (SpaceJump in loadout)
+                )
+            )
+        ) and
+        (
+            (canIBJ in loadout) or
+            (
+                (Wave in loadout) and
+                (canFly in loadout) or
+                (
+                    (HiJump in loadout) and
+                    (SpeedBooster in loadout) and
+                    (Ice in loadout)
+                )
+            )
+        )
     ),
 }
 
