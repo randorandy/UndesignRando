@@ -5,7 +5,7 @@ import argparse
 
 from connection_data import SunkenNestL, VanillaAreas
 from fillInterface import FillAlgorithm
-from game import Game
+from game import Game, GameOptions
 from item_data import Item, Items, items_unpackable
 from loadout import Loadout
 from location_data import Location, pullCSV, spacePortLocs
@@ -17,16 +17,18 @@ from romWriter import RomWriter
 from solver import solve
 
 
-def plmidFromHiddenness(itemArray, hiddenness) -> bytes:
+def plmidFromHiddenness(itemArray, hiddenness, visible = True) -> bytes:
     if hiddenness == "open":
         plmid = itemArray[1]
     elif hiddenness == "chozo":
         plmid = itemArray[2]
     else:
         plmid = itemArray[3]
+    if visible:
+        plmid = itemArray[1]
     return plmid
 
-def write_location(romWriter: RomWriter, location: Location) -> None:
+def write_location(romWriter: RomWriter, location: Location, visible = True) -> None:
     """
     provide a location with an ['item'] value, such as Missile, Super, etc
     write all rom locations associated with the item location
@@ -34,7 +36,7 @@ def write_location(romWriter: RomWriter, location: Location) -> None:
     item = location["item"]
     assert item, f"{location['fullitemname']} didn't get an item"
     # TODO: support locations with no items?
-    plmid = plmidFromHiddenness(item, location['hiddenness'])
+    plmid = plmidFromHiddenness(item, location['hiddenness'], visible)
     for address in location['locids']:
         romWriter.writeItem(address, plmid, item[4])
     for address in location['alternateroomlocids']:
@@ -43,7 +45,7 @@ def write_location(romWriter: RomWriter, location: Location) -> None:
             # as the corresponding "pre-item-move" item had
             plmid_altroom = plmid
         else:
-            plmid_altroom = plmidFromHiddenness(item, location['alternateroomdifferenthiddenness'])
+            plmid_altroom = plmidFromHiddenness(item, location['alternateroomdifferenthiddenness'], visible)
         romWriter.writeItem(address, plmid_altroom, item[4])
 
 
@@ -54,11 +56,13 @@ fillers: dict[str, Type[FillAlgorithm]] = {
 
 # main program
 def Main(argv: list[str], romWriter: Optional[RomWriter] = None) -> None:
-    game = generate()
+    options = GameOptions(True)
+    game = generate(options)
     rom_name = write_rom(game)
     write_spoiler_file(game, rom_name)
 
-def generate() -> Game:
+def generate(options: GameOptions) -> Game:
+    #print("started generate with options ",options)
     logicChoice = "E"
     fillChoice = "D"
     areaA = ""
@@ -66,21 +70,22 @@ def generate() -> Game:
     seeeed = random.randint(0, 9999999)
     random.seed(seeeed)
 
-
+    
     csvdict = pullCSV()
+    #print("pulled csv")
     locArray = list(csvdict.values())
     
     seedComplete = False
     randomizeAttempts = 0
     game = Game(Expert,
                 csvdict,
-                areaA == "A",
+                options.visibility,
                 VanillaAreas(),
                 seeeed)
+    #print("Just so you know, visibility is set to ",options.visibility)
     while not seedComplete :
-        if game.area_rando:  # area rando
-            game.connections = areaRando.RandomizeAreas()
-            # print(Connections) #test
+        
+        
         randomizeAttempts += 1
         if randomizeAttempts > 10:
             print("Giving up after 10 attempts. Help?")
@@ -138,7 +143,6 @@ def write_rom(game: Game, romWriter: Optional[RomWriter] = None) -> str:
     
     logicChoice = "E"
 
-    areaA = ""
 
 
     rom_name = f"Undesign{game.seed}.sfc"
@@ -152,7 +156,7 @@ def write_rom(game: Game, romWriter: Optional[RomWriter] = None) -> str:
         romWriter.setBaseFilename(rom1_path[:-4].split("/")[-1])
 
     for loc in game.all_locations.values():
-        write_location(romWriter, loc)
+        write_location(romWriter, loc, game.visibility)
     
     # Morph Ball Fix
     #romWriter.writeBytes(0x268ce, b"\x04")

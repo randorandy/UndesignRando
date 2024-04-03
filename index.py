@@ -6,7 +6,7 @@ from typing import Any, Literal, Optional, TypedDict
 # pyscript library
 import js  # type: ignore
 
-from game import Game
+from game import Game, GameOptions
 from romWriter import RomWriter
 from Main import generate, get_spoiler, write_rom
 
@@ -15,13 +15,7 @@ Element: Any  # pyscript built-in
 
 
 class WebParams(TypedDict):
-    area_rando: bool
-    small_spaceport: bool
-    escape_shortcuts: bool
-    fill: Literal["D", "B", "MM"]
-    cypher: str
-    tricks: list[str]
-    daphne_gate: bool
+    visibility: bool
 
 
 # the roll process is divided up to make the ui more responsive,
@@ -30,7 +24,7 @@ class WebParams(TypedDict):
 
 # global state between roll functions
 rom_writer: Optional[RomWriter] = None
-options  = None
+options: Optional[GameOptions] = None
 game: Optional[Game] = None
 
 
@@ -53,20 +47,24 @@ def roll1() -> bool:
 def roll2(params_str: str) -> None:
     global options
     print("roll2 initiated")
-    #print(params_str)
-    #params: WebParams = json.loads(params_str)
+    print(params_str)
+    params: WebParams = json.loads(params_str)
 
     #tricks: frozenset[Trick] = frozenset([getattr(Tricks, trick_name) for trick_name in params["tricks"]])
 
     # romWriter = RomWriter.fromBlankIps()  # TODO
-    #print(options)
+    options = GameOptions(
+        bool(params["visibility"]))
+    #
 
 
 def roll3() -> bool:
     global game
     print("roll3 initiated")
-    #assert options
-    game = generate()
+    #print(options)
+    assert options
+    #print(options)
+    game = generate(options)
     return all(not (loc["item"] is None) for loc in game.all_locations.values())
 
 
