@@ -432,13 +432,13 @@ area_logic: AreaLogicType = {
 
 
 location_logic: LocationLogicType = {
-    "*Morph Ball": lambda loadout: (
+    "Morph Ball": lambda loadout: (
         True
     ),
-    "*Missile (First)": lambda loadout: (
+    "Missile (First)": lambda loadout: (
         (Morph in loadout)
     ),
-    "*Bombs": lambda loadout: (
+    "Bombs": lambda loadout: (
         (eastCrateria in loadout) and
         (canIBJ in loadout) and #maybe
         (
@@ -453,65 +453,65 @@ location_logic: LocationLogicType = {
             (GravitySuit in loadout)
         )
     ),
-    "*Super Missile (Spore Spawn)": lambda loadout: (
+    "Super Missile (Spore Spawn)": lambda loadout: (
         (pinkDoor in loadout) and
         (canUseBombs in loadout)
     ),
-    "*Missile (Landing Site)": lambda loadout: (
+    "Missile (Landing Site)": lambda loadout: (
         (Super in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Power Bomb (Parlor)": lambda loadout: (
+    "Power Bomb (Parlor)": lambda loadout: (
         (canUsePB in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Missile (Brinstar small sidehopper alley)": lambda loadout: (
+    "Missile (Brinstar small sidehopper alley)": lambda loadout: (
         (pinkDoor in loadout)
     ),
-    "*Wall-Jump Boots": lambda loadout: (
+    "Wall-Jump Boots": lambda loadout: (
         (pinkDoor in loadout)
     ),
-    "*Super Missile (West Crateria chain)": lambda loadout: (
+    "Super Missile (West Crateria chain)": lambda loadout: (
         (Super in loadout) and
         (SpeedBooster in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Missile (Crateria west of landing site)": lambda loadout: (
+    "Missile (Crateria west of landing site)": lambda loadout: (
         (pinkDoor in loadout) and
         (canUseBombs in loadout)
     ),
-    "*Energy Tank (Parlor)": lambda loadout: (
+    "Energy Tank (Parlor)": lambda loadout: (
         (pinkDoor in loadout) and
         (canUseBombs in loadout)
     ),
-    "*Missile (Crateria west courtyard)": lambda loadout: (
+    "Missile (Crateria west courtyard)": lambda loadout: (
         (eastCrateria in loadout) and
         (
             (canFly in loadout) or
             (SpeedBooster in loadout)
         )
     ),
-    "*Missile (East Crateria green doors)": lambda loadout: (
+    "Missile (East Crateria green doors)": lambda loadout: (
         (eastCrateria in loadout) and
         (canUseBombs in loadout) and
         (Super in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Missile (Bomb Torizo)": lambda loadout: (
+    "Missile (Bomb Torizo)": lambda loadout: (
         (eastCrateria in loadout) and
         (
             (canBreakBlocks in loadout) or
             (SpeedBooster in loadout)
             )
     ),
-    "*Super Missile (Brinstar spikes)": lambda loadout: (
+    "Super Missile (Brinstar spikes)": lambda loadout: (
         (pinkDoor in loadout) and
         (canUseBombs in loadout)
     ),
-    "*Energy Tank (Brinstar bat cave)": lambda loadout: (
+    "Energy Tank (Brinstar bat cave)": lambda loadout: (
         (pinkDoor in loadout)
     ),
-    "*Power Bomb (Crateria east courtyard)": lambda loadout: (
+    "Power Bomb (Crateria east courtyard)": lambda loadout: (
         (canUsePB in loadout) and
         (pinkDoor in loadout) and
         (
@@ -519,7 +519,7 @@ location_logic: LocationLogicType = {
             (SpeedBooster in loadout)
         )
     ),
-    "*Super Missile (Crateria west courtyard)": lambda loadout: (
+    "Super Missile (Crateria west courtyard)": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout) and
         (
@@ -529,7 +529,7 @@ location_logic: LocationLogicType = {
         (canUseBombs in loadout) and
         (purpleDoor in loadout)
     ),
-    "*Missile (Purple Crateria lower depths access)": lambda loadout: (
+    "Missile (Purple Crateria lower depths access)": lambda loadout: (
         (canUseBombs in loadout) and
         (Super in loadout) and
         (pinkDoor in loadout) and
@@ -538,7 +538,7 @@ location_logic: LocationLogicType = {
             (canJumpHigh in loadout)
         )
     ),
-    "*Missile (Maridia-Brinstar tube)": lambda loadout: (
+    "Missile (Maridia-Brinstar tube)": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout) and
         (canUsePB in loadout) and
@@ -547,24 +547,25 @@ location_logic: LocationLogicType = {
             (canJumpHigh in loadout)
         )
     ),
-    "*Energy Tank (Red Brinstar zebbos)": lambda loadout: (
+    "Energy Tank (Red Brinstar zebbos)": lambda loadout: (
         (kraid in loadout)
     ),
-    "*Missile (Red Brinstar Samus eaters)": lambda loadout: (
+    "Missile (Red Brinstar Samus eaters)": lambda loadout: (
         (kraid in loadout) and
         (canDBJ in loadout)
     ),
-    "*Missile (Red Brinstar underwater)": lambda loadout: (
+    "Missile (Red Brinstar underwater)": lambda loadout: (
         (kraid in loadout)
     ),
-    "*Varia Suit": lambda loadout: (
+    "Varia Suit": lambda loadout: (
         (varia in loadout)
     ),
-    "*Missile (Warehouse entrance)": lambda loadout: (
+    "Missile (Warehouse entrance)": lambda loadout: (
         (Super in loadout) and
-        (pinkDoor in loadout)
+        (pinkDoor in loadout) and
+        (canUseBombs in loadout)
     ),
-    "*Super Missile (Warehouse entrance)": lambda loadout: (
+    "Super Missile (Warehouse entrance)": lambda loadout: (
         (pinkDoor in loadout) and
         (
             (kraid in loadout) or
@@ -574,7 +575,7 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Missile (Brinstar junction)": lambda loadout: (
+    "Missile (Brinstar junction)": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout) and
         (
@@ -585,62 +586,62 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Missile (Hi-Jump)": lambda loadout: (
+    "Missile (Hi-Jump)": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Charge Beam": lambda loadout: (
+    "Charge Beam": lambda loadout: (
         (pinkDoor in loadout) and
         (Super in loadout)
     ),
-    "*Reserve Tank (Brinstar)": lambda loadout: (
+    "Reserve Tank (Brinstar)": lambda loadout: (
         (kraid in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Missile (Draygon sandfall)": lambda loadout: (
+    "Missile (Draygon sandfall)": lambda loadout: (
         (leaveCentralMaridia in loadout) and
         (SpaceJump in loadout)
     ),
-    "*Missile (East Maridia NEStroid item room)": lambda loadout: (
+    "Missile (East Maridia NEStroid item room)": lambda loadout: (
         (eastMaridia in loadout) or
         (
             (leaveCentralMaridia in loadout) and
             (canIBJ in loadout)
         )
     ),
-    "*Missile (Draygon sandfall access)": lambda loadout: (
+    "Missile (Draygon sandfall access)": lambda loadout: (
         (eastMaridia in loadout)
     ),
-    "*Missile (East Maridia top)": lambda loadout: (
+    "Missile (East Maridia top)": lambda loadout: (
         (eastMaridia in loadout) and
         (canFly in loadout)
     ),
-    "*Missile (East Maridia shaft ceiling)": lambda loadout: (
+    "Missile (East Maridia shaft ceiling)": lambda loadout: (
         (eastMaridia in loadout) and
         (
             (canFly in loadout) or
             (canJumpHigh in loadout)
         )
     ),
-    "*Super Missile (East Maridia shinespark)": lambda loadout: (
+    "Super Missile (East Maridia shinespark)": lambda loadout: (
         (eastMaridia in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Super Missile (Maridia speedball)": lambda loadout: (
+    "Super Missile (Maridia speedball)": lambda loadout: (
         (leaveCentralMaridia in loadout) and
         (canFly in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Super Missile (Parlor)": lambda loadout: (
+    "Super Missile (Parlor)": lambda loadout: (
         (canUsePB in loadout) and
         (canJumpHigh in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Missile (Parlor blue gate)": lambda loadout: (
+    "Missile (Parlor blue gate)": lambda loadout: (
         (Wave in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Power Bomb (Purple Crateria one-shot spark)": lambda loadout: (
+    "Power Bomb (Purple Crateria one-shot spark)": lambda loadout: (
         (canUseBombs in loadout) and
         (Super in loadout) and
         (pinkDoor in loadout) and
@@ -650,23 +651,23 @@ location_logic: LocationLogicType = {
             (canJumpHigh in loadout)
         )
     ),
-    "*Missile (East Crateria wall)": lambda loadout: (
+    "Missile (East Crateria wall)": lambda loadout: (
         (eastCrateria in loadout) and
         (Super in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Energy Tank (East Crateria Chain)": lambda loadout: (
+    "Energy Tank (East Crateria Chain)": lambda loadout: (
         (eastCrateria in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Power Bomb (East Crateria maze)": lambda loadout: (
+    "Power Bomb (East Crateria maze)": lambda loadout: (
         (eastCrateria in loadout) and
         (Super in loadout) and
         (pinkDoor in loadout) and
         (canUseBombs in loadout) and
         (canSBJ in loadout)
     ),
-    "*Power Bomb (Crateria west of landing site)": lambda loadout: (
+    "Power Bomb (Crateria west of landing site)": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout) and
         (canIBJ in loadout) and
@@ -679,19 +680,19 @@ location_logic: LocationLogicType = {
             (Ice in loadout)
         )
     ),
-    "*Missile (West Brinstar Guardian right)": lambda loadout: (
+    "Missile (West Brinstar Guardian right)": lambda loadout: (
         (canUsePB in loadout) and
         (kraid in loadout) and
         (pinkDoor in loadout) and
         (Super in loadout)
     ),
-    "*Missile (West Brinstar Guardian left)": lambda loadout: (
+    "Missile (West Brinstar Guardian left)": lambda loadout: (
         (canUsePB in loadout) and
         (kraid in loadout) and
         (pinkDoor in loadout) and
         (Super in loadout)
     ),
-    "*Hi-Jump Boots": lambda loadout: (
+    "Hi-Jump Boots": lambda loadout: (
         (purpleDoor in loadout) and
         (canUseBombs in loadout) and
         (
@@ -702,7 +703,7 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Energy Tank (Brinstar fish tank)": lambda loadout: (
+    "Energy Tank (Brinstar fish tank)": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout) and
         (canBreakBlocks in loadout) and
@@ -714,7 +715,7 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Missile (Brinstar-Norfair tube)": lambda loadout: (
+    "Missile (Brinstar-Norfair tube)": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout) and
         (canUsePB in loadout) and
@@ -742,41 +743,41 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Power Bomb (Maridia-Brinstar tube)": lambda loadout: (
+    "Power Bomb (Maridia-Brinstar tube)": lambda loadout: (
         (leaveCentralMaridia in loadout)
     ),
-    "*Missile (Botwoon sandfall)": lambda loadout: (
+    "Missile (Botwoon sandfall)": lambda loadout: (
         (maridia in loadout) and
         (SpaceJump in loadout)
     ),
-    "*Power Bomb (West Maridia sandpit)": lambda loadout: (
+    "Power Bomb (West Maridia sandpit)": lambda loadout: (
         (maridia in loadout)
     ),
-    "*Missile (West Maridia sandpit left)": lambda loadout: (
+    "Missile (West Maridia sandpit left)": lambda loadout: (
         (maridia in loadout)
     ),
-    "*Missile (West Maridia sandpit right)": lambda loadout: (
+    "Missile (West Maridia sandpit right)": lambda loadout: (
         (maridia in loadout)
     ),
-    "*Missile (West Maridia ramps)": lambda loadout: (
+    "Missile (West Maridia ramps)": lambda loadout: (
         (maridia in loadout) and
         (canDBJ in loadout)
     ),
-    "*Missile (West Maridia chain)": lambda loadout: (
+    "Missile (West Maridia chain)": lambda loadout: (
         (maridia in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Missile (West Maridia red gates)": lambda loadout: (
+    "Missile (West Maridia red gates)": lambda loadout: (
         (eastNorfair in loadout)
     ),
-    "*Energy Tank (Botwoon)": lambda loadout: (
+    "Energy Tank (Botwoon)": lambda loadout: (
         (maridia in loadout) and
         (canUseBombs in loadout)
     ),
-    "*Space Jump": lambda loadout: (
+    "Space Jump": lambda loadout: (
         (botwoon in loadout)
     ),
-    "*Missile (West Maridia sandfall)": lambda loadout: (
+    "Missile (West Maridia sandfall)": lambda loadout: (
         (maridia in loadout) and
         (
             (canUsePB in loadout) or
@@ -788,14 +789,14 @@ location_logic: LocationLogicType = {
             (Screw in loadout)
         )
     ),
-    "*Missile (Maridia sandcanyon)": lambda loadout: (
+    "Missile (Maridia sandcanyon)": lambda loadout: (
         (maridia in loadout) and
         (
             (leaveCentralMaridia in loadout) or
             (Grapple in loadout)
         )
     ),
-    "*Super Missile (East Maridia chain)": lambda loadout: (
+    "Super Missile (East Maridia chain)": lambda loadout: (
         (SpeedBooster in loadout) and
         (canFly in loadout) and
         (canDBJ in loadout) and
@@ -804,51 +805,51 @@ location_logic: LocationLogicType = {
             (eastMaridia in loadout)
         )
     ),
-    "*Missile (Maridia uterus room)": lambda loadout: (
+    "Missile (Maridia uterus room)": lambda loadout: (
         (maridia in loadout)
     ),
-    "*Power Bomb (West Maridia gate hall)": lambda loadout: (
+    "Power Bomb (West Maridia gate hall)": lambda loadout: (
         (draygon in loadout) and
         (canIBJ in loadout)
     ),
-    "*Super Missile (Crateria Depths super ceiling)": lambda loadout: (
+    "Super Missile (Crateria Depths super ceiling)": lambda loadout: (
         (crateriaDepths in loadout) and
         (
             (canFly in loadout) or
             (SpeedBooster in loadout)
         )
     ),
-    "*Super Missile (Brinstar-Crateria elevator)": lambda loadout: (
+    "Super Missile (Brinstar-Crateria elevator)": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Reserve Tank (Maridia)": lambda loadout: (
+    "Reserve Tank (Maridia)": lambda loadout: (
         (leaveCentralMaridia in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Reserve Tank (Crateria)": lambda loadout: (
+    "Reserve Tank (Crateria)": lambda loadout: (
         (crateriaDepths in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Missile (Parlor tsundere)": lambda loadout: (
+    "Missile (Parlor tsundere)": lambda loadout: (
         (canUseBombs in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Missile (Lost Caverns)": lambda loadout: (
+    "Missile (Lost Caverns)": lambda loadout: (
         (crateriaDepths in loadout)
     ),
-    "*Super Missile (Lost Caverns)": lambda loadout: (
+    "Super Missile (Lost Caverns)": lambda loadout: (
         (crateriaDepths in loadout)
     ),
-    "*Power Bomb (East Crateria Guardian)": lambda loadout: (
+    "Power Bomb (East Crateria Guardian)": lambda loadout: (
         (crateriaDepths in loadout) and
         (SpeedBooster in loadout) and
         (Wave in loadout)
     ),
-    "*Gravity Suit": lambda loadout: (
+    "Gravity Suit": lambda loadout: (
         (crateriaDepths in loadout)
     ),
-    "*Energy Tank (Crateria green gates)": lambda loadout: (
+    "Energy Tank (Crateria green gates)": lambda loadout: (
         (crateriaDepths in loadout) and
         (
             (canFly in loadout) or
@@ -858,18 +859,18 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Power Bomb (Crateria map)": lambda loadout: (
+    "Power Bomb (Crateria map)": lambda loadout: (
         (pinkDoor in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Missile (Crateria awakening)": lambda loadout: (
+    "Missile (Crateria awakening)": lambda loadout: (
         (pinkDoor in loadout) and
         (
             (canUseBombs in loadout) or
             (SpeedBooster in loadout)
         )
     ),
-    "*Super Missile (Crateria courtyard tunnel)": lambda loadout: (
+    "Super Missile (Crateria courtyard tunnel)": lambda loadout: (
         (canUseBombs in loadout) and
         (Super in loadout) and
         (pinkDoor in loadout) and
@@ -878,7 +879,7 @@ location_logic: LocationLogicType = {
             (canJumpHigh in loadout)
         )
     ),
-    "*Missile (Crateria Depths entrance)": lambda loadout: (
+    "Missile (Crateria Depths entrance)": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout) and
         (
@@ -899,7 +900,7 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Super Missile (Purple Crateria bat cave)": lambda loadout: (
+    "Super Missile (Purple Crateria bat cave)": lambda loadout: (
         (Super in loadout) and
         (canUseBombs in loadout) and
         (
@@ -910,17 +911,17 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Missile (Spazer)": lambda loadout: (
+    "Missile (Spazer)": lambda loadout: (
         (canDBJ in loadout) and
         (Super in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Spazer": lambda loadout: (
+    "Spazer": lambda loadout: (
         (Super in loadout) and
         (pinkDoor in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Missile (Brinstar-Crateria elevator)": lambda loadout: (
+    "Missile (Brinstar-Crateria elevator)": lambda loadout: (
         (canDBJ in loadout) and
         (canUseBombs in loadout) and
         (pinkDoor in loadout)
@@ -938,52 +939,52 @@ location_logic: LocationLogicType = {
         (pinkDoor in loadout) and
         (Super in loadout)
     ),
-    "*Super Missile (Brinstar Diagon Alley)": lambda loadout: (
+    "Super Missile (Brinstar Diagon Alley)": lambda loadout: (
         (canUsePB in loadout) and
         (Super in loadout) and
         (SpeedBooster in loadout) and
         (pinkDoor in loadout)
     ),
-    "*Missile (Brinstar Dachora access)": lambda loadout: (
+    "Missile (Brinstar Dachora access)": lambda loadout: (
         (Super in loadout) and
         (kraid in loadout)
     ),
-    "*Power Bomb (Charge)": lambda loadout: (
+    "Power Bomb (Charge)": lambda loadout: (
         (pinkDoor in loadout) and
         (Super in loadout) and
         (canUsePB in loadout)
     ),
-    "*Power Bomb (Crateria awakening)": lambda loadout: (
+    "Power Bomb (Crateria awakening)": lambda loadout: (
         (canUsePB in loadout) and
         (
             (canIBJ in loadout) or
             (HiJump in loadout)
         )
     ),
-    "*Missile (Brinstar Diagon Alley)": lambda loadout: (
+    "Missile (Brinstar Diagon Alley)": lambda loadout: (
         (canUsePB in loadout) and
         (pinkDoor in loadout) and
         (Super in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Power Bomb (Crateria first missile)": lambda loadout: (
+    "Power Bomb (Crateria first missile)": lambda loadout: (
         (canUsePB in loadout)
     ),
-    "*Power Bomb (Warehouse top)": lambda loadout: (
+    "Power Bomb (Warehouse top)": lambda loadout: (
         (kraid in loadout) and
         (canUsePB in loadout)
     ),
-    "*X-ray Scope": lambda loadout: (
+    "X-ray Scope": lambda loadout: (
         (pinkDoor in loadout) and
         (canUsePB in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Missile (Red Brinstar land guardian)": lambda loadout: (
+    "Missile (Red Brinstar land guardian)": lambda loadout: (
         (kraid in loadout) and
         (canUsePB in loadout) and
         (canDBJ in loadout)
     ),
-    "*Power Bomb (Red Brinstar top entrance)": lambda loadout: (
+    "Power Bomb (Red Brinstar top entrance)": lambda loadout: (
         (kraid in loadout) and
         (canUsePB in loadout) and
         (
@@ -994,7 +995,7 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Power Bomb (Lower Norfair entrance)": lambda loadout: (
+    "Power Bomb (Lower Norfair entrance)": lambda loadout: (
         (eastNorfair in loadout) and
         (canFly in loadout) and
         (
@@ -1002,13 +1003,13 @@ location_logic: LocationLogicType = {
             (HiJump in loadout)
         )
     ),
-    "*Ice Beam": lambda loadout: (
+    "Ice Beam": lambda loadout: (
         (norfair in loadout)
     ),
     "Missile (Ridley gate shaft)": lambda loadout: (
         (lowerNorfair in loadout)
     ),
-    "*Speed Booster": lambda loadout: (
+    "Speed Booster": lambda loadout: (
         (westNorfair in loadout) and
         (canUsePB in loadout) and
         (SpeedBooster in loadout)
@@ -1020,7 +1021,7 @@ location_logic: LocationLogicType = {
         (purpleDoor in loadout) and
         (GravitySuit in loadout)
     ),
-    "*Super Missile (Crocomire)": lambda loadout: (
+    "Super Missile (Crocomire)": lambda loadout: (
         (westNorfair in loadout) and
         (canUseBombs in loadout) and
         (
@@ -1036,43 +1037,43 @@ location_logic: LocationLogicType = {
         (westNorfair in loadout) and
         (canDBJ in loadout)
     ),
-    "*Missile (Norfair-Brinstar tube lava)": lambda loadout: (
+    "Missile (Norfair-Brinstar tube lava)": lambda loadout: (
         (westNorfair in loadout) and
         (
             (GravitySuit in loadout) or
             (energy200 in loadout)
         )
     ),
-    "*Missile (Lower Norfair top)": lambda loadout: (
+    "Missile (Lower Norfair top)": lambda loadout: (
         (lowerNorfair in loadout)
     ),
-    "*Missile (Lower Norfair shinespark)": lambda loadout: (
+    "Missile (Lower Norfair shinespark)": lambda loadout: (
         (lowerNorfair in loadout) and
         (SpeedBooster in loadout)
     ),
     "Missile (Grapple)": lambda loadout: (
         (escapeGrappleGauntlet in loadout)
     ),
-    "*Power Bomb (Grapple)": lambda loadout: (
+    "Power Bomb (Grapple)": lambda loadout: (
         (escapeGrappleGauntlet in loadout) and
         (
             (GravitySuit in loadout) or
             (energy200 in loadout)
         )
     ),
-    "*Energy Tank (Ridley)": lambda loadout: (
+    "Energy Tank (Ridley)": lambda loadout: (
         (escapeGrappleGauntlet in loadout) and
         (ridley in loadout)
     ),
-    "*Grapple Beam": lambda loadout: (
+    "Grapple Beam": lambda loadout: (
         (escapeGrappleGauntlet in loadout)
     ),
-    "*Power Bomb (West Norfair sanctum)": lambda loadout: (
+    "Power Bomb (West Norfair sanctum)": lambda loadout: (
         (westNorfair in loadout) and
         (SpeedBooster in loadout) and
         (canUsePB in loadout)
     ),
-    "*Missile (West Norfair sanctum hidden)": lambda loadout: (
+    "Missile (West Norfair sanctum hidden)": lambda loadout: (
         (westNorfair in loadout) and
         (SpeedBooster in loadout) and
         (
@@ -1081,10 +1082,10 @@ location_logic: LocationLogicType = {
             (SpaceJump in loadout)
         )
     ),
-    "*Power Bomb (East Norfair Guardian)": lambda loadout: (
+    "Power Bomb (East Norfair Guardian)": lambda loadout: (
         (escapeGrappleGauntlet in loadout)
     ),
-    "*Missile (Bob Jr.)": lambda loadout: (
+    "Missile (Bob Jr.)": lambda loadout: (
         (kraid in loadout) and
         (Varia in loadout) and
         (canUsePB in loadout) and
@@ -1102,7 +1103,7 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Missile (East Norfair Alcoon hideout)": lambda loadout: (
+    "Missile (East Norfair Alcoon hideout)": lambda loadout: (
         (kraid in loadout) and
         (Varia in loadout) and
         (canUsePB in loadout) and
@@ -1132,7 +1133,7 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Wave Beam": lambda loadout: (
+    "Wave Beam": lambda loadout: (
         (westNorfair in loadout) and
         (
             (SpeedBooster in loadout) or
@@ -1167,7 +1168,7 @@ location_logic: LocationLogicType = {
         )
 
     ),
-    "*Missile (Bob Jr. underpass)": lambda loadout: (
+    "Missile (Bob Jr. underpass)": lambda loadout: (
         (westNorfair in loadout) and
         (canUsePB in loadout) and
         (canDBJ in loadout) and
@@ -1185,11 +1186,11 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Power Bomb (Lower Norfair Violas)": lambda loadout: (
+    "Power Bomb (Lower Norfair Violas)": lambda loadout: (
         (lowerNorfair in loadout) and
         (canDBJ in loadout)
     ),
-    "*Power Bomb (Golden Torizo)": lambda loadout: (
+    "Power Bomb (Golden Torizo)": lambda loadout: (
         (lowerNorfair in loadout) and
         (ridley in loadout)
     ),
@@ -1197,21 +1198,21 @@ location_logic: LocationLogicType = {
         (ridley in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Missile (Lower Norfair puromi hall)": lambda loadout: (
+    "Missile (Lower Norfair puromi hall)": lambda loadout: (
         (lowerNorfair in loadout)
     ),
-    "*Plasma Beam": lambda loadout: (
+    "Plasma Beam": lambda loadout: (
         (ridley in loadout) and
         (GravitySuit in loadout)
     ),
-    "*Super Missile (Lower Norfair holtz tease)": lambda loadout: (
+    "Super Missile (Lower Norfair holtz tease)": lambda loadout: (
         (lowerNorfair in loadout) and
         (
             (canSBJ in loadout) or
             (canIBJ in loadout)
         )
     ),
-    "*Screw Attack": lambda loadout: (
+    "Screw Attack": lambda loadout: (
         (eastNorfair in loadout) and
         (
             (SpeedBooster in loadout) or
@@ -1225,24 +1226,24 @@ location_logic: LocationLogicType = {
             (SpaceJump in loadout)
         )
     ),
-    "*Missile (East Norfair Indiana Jones)": lambda loadout: (
+    "Missile (East Norfair Indiana Jones)": lambda loadout: (
         (eastNorfair in loadout)
     ),
-    "*Super Missile (East Norfair Guardian)": lambda loadout: (
+    "Super Missile (East Norfair Guardian)": lambda loadout: (
         (eastNorfair in loadout) and
         (canJumpHigh in loadout)
     ),
-    "*Power Bomb (Magmoor Tunnel)": lambda loadout: (
+    "Power Bomb (Magmoor Tunnel)": lambda loadout: (
         (canUseBombs in loadout) and
         (lowerNorfair in loadout) and
         (SpeedBooster in loadout)
     ),
-    "*Energy Tank (Magmoor Tunnel)": lambda loadout: (
+    "Energy Tank (Magmoor Tunnel)": lambda loadout: (
         (norfair in loadout) and
         (canUseBombs in loadout) and
         (canDBJ in loadout)
     ),
-    "*Power Bomb (Early PB maze)": lambda loadout: (
+    "Power Bomb (Early PB maze)": lambda loadout: (
         (westNorfair in loadout) and
         (
             (Wave in loadout) or
@@ -1257,7 +1258,7 @@ location_logic: LocationLogicType = {
         (westNorfair in loadout) and
         (canUsePB in loadout)
     ),
-    "*Energy Tank (East Norfair cavern storage)": lambda loadout: (
+    "Energy Tank (East Norfair cavern storage)": lambda loadout: (
         (eastNorfair in loadout) and
         (
             (Grapple in loadout) or
@@ -1272,27 +1273,27 @@ location_logic: LocationLogicType = {
             )
         )
     ),
-    "*Missile (East Crateria buried treasure)": lambda loadout: (
+    "Missile (East Crateria buried treasure)": lambda loadout: (
         (crateriaDepths in loadout) and
         (Wave in loadout) and
         (canUseBombs in loadout)
     ),
-    "*Reserve Tank (Norfair)": lambda loadout: (
+    "Reserve Tank (Norfair)": lambda loadout: (
         (westNorfair in loadout) and
         (canUsePB in loadout) and
         (SpeedBooster in loadout) and
         (GravitySuit in loadout) and
         (canFly in loadout)
     ),
-    "*Missile (West Norfair morph lock)": lambda loadout: (
+    "Missile (West Norfair morph lock)": lambda loadout: (
         (westNorfair in loadout) and
         (canSBJ in loadout)
     ),
-    "*Energy Tank (Maridia Ridley tube)": lambda loadout: (
+    "Energy Tank (Maridia Ridley tube)": lambda loadout: (
         (maridia in loadout) and
         (ridley in loadout)
     ),
-    "*Energy Tank (West Maridia chain)": lambda loadout: (
+    "Energy Tank (West Maridia chain)": lambda loadout: (
         (maridia in loadout) and
         (SpeedBooster in loadout) and
         (
@@ -1308,7 +1309,7 @@ location_logic: LocationLogicType = {
         (SpeedBooster in loadout) and
         (HiJump in loadout)
     ),
-    "*Energy Tank (Draygon sandfall)": lambda loadout: (
+    "Energy Tank (Draygon sandfall)": lambda loadout: (
         (
             (eastMaridia in loadout) and
             (
@@ -1322,7 +1323,7 @@ location_logic: LocationLogicType = {
             (SpaceJump in loadout)
         )
     ),
-    "*Missile (East Maridia mocktroid cave)": lambda loadout: (
+    "Missile (East Maridia mocktroid cave)": lambda loadout: (
         (leaveCentralMaridia in loadout) and
         (
             (canFly in loadout) or
@@ -1340,10 +1341,10 @@ location_logic: LocationLogicType = {
         ) and
         (SpeedBooster in loadout)
     ),
-    "*Super Missile (East Maridia Draygon lock)": lambda loadout: (
+    "Super Missile (East Maridia Draygon lock)": lambda loadout: (
         (draygon in loadout)
     ),
-    "*Beam Combo": lambda loadout: (
+    "Beam Combo": lambda loadout: (
         (leaveCentralMaridia in loadout) and
         (
             (canFly in loadout) or
@@ -1361,27 +1362,18 @@ location_logic: LocationLogicType = {
             (Wave in loadout) #??
         )
     ),
-    "Missile (West Norfair sanctum chozo)??": lambda loadout: (
-        (westNorfair in loadout) and
-        (SpeedBooster in loadout) and
-        (
-            (Grapple in loadout) or
-            (SpaceJump in loadout) or
-            (Screw in loadout)
-        )
-    ),
-    "*Missile (Norfair-Brinstar elevator)": lambda loadout: (
+    "Missile (Norfair-Brinstar elevator)": lambda loadout: (
         (westNorfair in loadout) and
         (
             (GravitySuit in loadout) or
             (energy400 in loadout)
         )
     ),
-    "*Energy Tank (Grapple)": lambda loadout: (
+    "Energy Tank (Grapple)": lambda loadout: (
         (escapeGrappleGauntlet in loadout) and
         (GravitySuit in loadout) #simplest logic for now
     ),
-    "*Super Missile (West Norfair Sanctum)": lambda loadout: (
+    "Super Missile (West Norfair Sanctum)": lambda loadout: (
         (westNorfair in loadout) and
         (SpeedBooster in loadout)
     ),
@@ -1394,7 +1386,7 @@ location_logic: LocationLogicType = {
             (SpaceJump in loadout)
         )
     ),
-    "*Power Bomb (East Norfair Purple Maze)": lambda loadout: (
+    "Power Bomb (East Norfair Purple Maze)": lambda loadout: (
         #copied logic from alcoon hideout
         (kraid in loadout) and
         (Varia in loadout) and

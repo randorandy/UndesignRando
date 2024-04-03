@@ -9,7 +9,7 @@ from location_data import Location, spacePortLocs
 from solver import solve
 
 _minor_items = {
-    Items.Missile: 73,
+    Items.Missile: 72,
     Items.Super: 19,
     Items.PowerBomb: 19,
     Items.Energy: 13,
