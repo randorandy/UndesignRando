@@ -194,8 +194,11 @@ def write_rom(game: Game, romWriter: Optional[RomWriter] = None) -> str:
     romWriter.writeBytes(0x14ba5f, b"\x2e")
     # West of Crateria Escape Patch
     romWriter.writeBytes(0x78735, b"\xb6")
-
-    
+    # starting items patch
+    romWriter.writeBytes(0xb2fd, b"\x20\x20\xef")
+    romWriter.writeBytes(0xef20, b"\xa9\x00\x04\x8d\xa2\x09\x8d\xa4\x09\xa9\x00\x00\x8d\xa6\x09\x8d\xa8\x09\x60")
+    # skip ceres especially for original redesign
+    romWriter.writeBytes(0x16ebb, b"\x05")
 
 
     romWriter.finalizeRom(rom1_path)
